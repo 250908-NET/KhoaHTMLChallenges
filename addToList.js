@@ -13,10 +13,16 @@ const addToList = (function () {
 // Show list as alert
 addItem.showList = function () {
     if (items.length === 0) {
-        alert("The list is empty.");
+        showToast("The list is empty!");
     } 
     else {
-        alert("Your items:\n" + items.join("\n"));
+        let list = "<ul>";
+        for (let i = 0; i < items.length; i++) 
+        {
+            list += "<li>" + items[i] + "</li>";
+        }
+        list += "</ul>";
+        showToast("Your items:" + list);
     }
 };
 
@@ -37,3 +43,10 @@ addBtn.addEventListener("click", () => {
 showBtn.addEventListener("click", () => {
   addToList.showList();
 });
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.innerHTML = message;
+  toast.className = "show";
+  setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+}
