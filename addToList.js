@@ -1,23 +1,39 @@
 // Persistent list that stays in memory
 const addToList = (function () {
-  const items = [];
-
-  return function (newItem) {
-    if (newItem.trim() !== "") {
-      items.push(newItem);
+    const items = [];
+    // add Item to list
+    function addItem(newItem) {
+    if (newItem.trim() !== "") 
+    {
+        items.push(newItem);
     }
     return items;
-  };
+}
+
+// Show list as alert
+addItem.showList = function () {
+    if (items.length === 0) {
+        alert("The list is empty.");
+    } 
+    else {
+        alert("Your items:\n" + items.join("\n"));
+    }
+};
+
+return addItem;
 })();
 
 const input = document.getElementById("itemInput");
 const addBtn = document.getElementById("addBtn");
-const list = document.getElementById("itemList");
+const showBtn = document.getElementById("showBtn");
 
-// Event listener for Add button
+// Add button: add item to list
 addBtn.addEventListener("click", () => {
   const item = input.value.trim();
-  const updatedList = addToList(item);
-
+  addToList(item);
 });
 
+// Show button: show list in alert
+showBtn.addEventListener("click", () => {
+  addToList.showList();
+});
