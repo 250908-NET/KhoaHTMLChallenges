@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Webpage</title>
+</head>
+<body>
+
+
+    <!-- About Section -->
+    <h2>About</h2>
+    <p>Some text about the website.</p>
+
+    <!-- Our Locations Section -->
+    <h3>Our Locations</h3>
+    <ul>
+        <li>USA
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/New_York_(state)">New York</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Columbus,_Ohio">Columbus</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Austin,_Texas">Austin</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Philadelphia">Philly</a></li>
+            </ul>
+        </li>
+        <li>World
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Ottawa">Ottawa</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Sydney">Sydney</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Upcoming Classes Section -->
+    <h3>Upcoming Classes</h3>
+    <table border="2" cellspacing="0" cellpadding="4">
+        <tr>
+            <th>Location</th>
+            <th>Topic</th>
+        </tr>
+        <tr>
+            <td>New York</td>
+            <td>JavaScript & jQuery</td>
+        </tr>
+        <tr>
+            <td>San Francisco</td>
+            <td>HTML & CSS</td>
+        </tr>
+    </table>
+
+    <!-- Sign Up Section -->
+    <h3>Sign Up!</h3>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="location">Location:</label>
+        <select id="location" name="location">
+            <option>San Francisco</option>
+            <option>New York</option>
+            <option>Columbus</option>
+            <option>Austin</option>
+            <option>Philly</option>
+            <option>Ottawa</option>
+            <option>Sydney</option>
+        </select><br>
+
+        <fieldset style="border: 1px solid black; padding: 8px;">
+            <legend>Gender</legend>
+            <input type="radio" id="female" name="gender" value="female"> Female
+            <input type="radio" id="male" name="gender" value="male"> Male
+        </fieldset>
+        <br>
+
+        <label for="experience">Experience:</label><br>
+        <textarea id="experience" name="experience" rows="4" cols="30"></textarea><br><br>
+
+        <input type="submit" value="Sign Up">
+    </form>
+
+    <br>
+
+    <!-- Footer Links -->
+    <p>
+        <a href="https://x.com/">Twitter</a> |
+        <a href="https://www.facebook.com/">Facebook</a> |
+        <a href="https://www.flickr.com/">Flickr</a>
+    </p>
+
+</body>
+</html>
