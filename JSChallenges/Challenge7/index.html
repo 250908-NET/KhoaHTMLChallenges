@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Square a Number</title>
+    </head>
+    
+    
+<body>
+  <h2>Square Calculator</h2>
+  <label for="numberInput">Enter a number:</label>
+  <input type="number" id="numberInput" placeholder="4">
+  <button onclick="squareNumber()">Square It!</button>
+  <script>
+        // Function to square a number
+        function square(num) {
+        return num * num;
+        }
+
+        // Function that reads input and alerts the squared result
+        function squareNumber() {
+        let input = document.getElementById("numberInput").value;
+
+            if (input === "") {
+                alert("Please enter a number first!");
+            } 
+            else {
+                let result = square(Number(input));
+                alert("The square is " + result);
+            }
+        }
+    </script>
+</body>
+</html>
