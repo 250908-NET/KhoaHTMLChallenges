@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Click Example</title>
+  </head>
+  <body>
+    <h1 id="heading">Hello, world!</h1>
+    <button id="clickBtn">Click Me</button>
+
+    <script>
+      // Select elements
+      let heading = document.getElementById("heading");
+      let button = document.getElementById("clickBtn");
+
+      // When button is clicked
+      button.addEventListener("click", function () {
+        heading.textContent = "You clicked the button!";
+        heading.style.color = "blue";
+        heading.style.fontSize = "32px";
+      });
+    </script>
+  </body>
+</html>
