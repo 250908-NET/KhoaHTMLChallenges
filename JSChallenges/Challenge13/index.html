@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Style Switcher</title>
+  </head>
+  <body>
+    <h1>Style Switcher</h1>
+
+    <p id="text">This is a sample paragraph.</p>
+
+    <button id="styleBtn">Make Red & Bold</button>
+    <button id="resetBtn">Reset</button>
+
+    <script>
+      const text = document.getElementById("text");
+      const styleBtn = document.getElementById("styleBtn");
+      const resetBtn = document.getElementById("resetBtn");
+
+      styleBtn.addEventListener("click", () => {
+        text.style.color = "red";
+        text.style.fontWeight = "bold";
+      });
+
+      resetBtn.addEventListener("click", () => {
+        text.style.color = "";
+        text.style.fontWeight = "";
+
+
+      });
+    </script>
+  </body>
+</html>
