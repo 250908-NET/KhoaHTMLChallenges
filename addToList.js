@@ -10,7 +10,7 @@ const addToList = (function () {
     return items;
 }
 
-// Show list as alert
+// Show list as Toast
 addItem.showList = function () {
     if (items.length === 0) {
         showToast("The list is empty!");
