@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Switcher</title>
+</head>
+<body>
+    <button id="toggleButton">Switch Image</button>
+    <br>
+    <br>
+    <img id="imageSrc" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg" alt="Animal" width="200">
+    
+    <script>
+    let img = document.getElementById("imageSrc");
+    let button = document.getElementById("toggleButton");
+
+    button.addEventListener("click", () => {
+    if (img.src.includes("https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg" )) {
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg";
+    } 
+    else {
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg" ;
+    }
+    });
+  </script>
+</body>
+</html>
