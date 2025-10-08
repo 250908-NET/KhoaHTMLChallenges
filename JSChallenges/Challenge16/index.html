@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Background Color Changer</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Change Background Color</h1>
+    <button id="colorBtn">Click me!</button>
+
+    <script>
+      let colorBtn = document.getElementById("colorBtn");
+      let colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+
+      colorBtn.addEventListener("click", () => {
+        let randomIndex = Math.floor(Math.random() * colors.length);
+        document.body.style.backgroundColor = colors[randomIndex];
+      });
+
+      text.addEventListener("click", () => {
+        text.classList.toggle("highlight");
+      });
+    </script>
+  </body>
+</html>
